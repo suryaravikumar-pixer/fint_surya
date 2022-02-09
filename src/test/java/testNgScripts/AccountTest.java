@@ -1,11 +1,11 @@
-package executerScripts;
+package testNgScripts;
 
 import org.testng.annotations.Test;
 
-import genericScripts.BaseLib;
-import pomSalesFroce.AccountsPage;
+import baseScripts.BaseLibrary;
+import salesForcePages.AccountsPage;
 
-public class AccountTest extends BaseLib{
+public class AccountTest extends BaseLibrary{
 	@Test
 	public void accountTestFunction() throws Exception {
 		AccountsPage ap = new AccountsPage(driver);

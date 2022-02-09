@@ -1,4 +1,4 @@
-package genericScripts;
+package baseScripts;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -16,10 +16,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-import pomSalesFroce.HomePage;
-import pomSalesFroce.LoingPage;
 
-public class BaseLib {
+public class BaseLibrary {
 	public WebDriver wdriver;
 	public EventFiringWebDriver driver;
 	public FileInputStream file1;
@@ -29,13 +27,12 @@ public class BaseLib {
 	@Parameters("browser")
 	public void openBrowser(String browser) throws Exception
 	{
-		
+		// chrome options
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
 		options.addArguments("disable-popup-blocking");
 		options.addArguments("disable-extensions");
 		options.addArguments("--disable-notifications");
-//		ChromeDriver driver = new ChromeDriver(options);
 		if(browser.equalsIgnoreCase("chrome"))
 		{
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\test\\resources\\driver\\chromedriver.exe");
@@ -47,8 +44,8 @@ public class BaseLib {
 					wdriver=new FirefoxDriver();
 		}
 		driver=new EventFiringWebDriver(wdriver);
-//		wdriver.manage().window().maximize();
 		Thread.sleep(2000);
+		// path for properties file
 		file1=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\env.properties");
 		prop1 = new Properties();
 		prop1.load(file1);
