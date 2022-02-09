@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-02-09T12:13:10 IST" name="suite1" finished-at="2022-02-09T12:13:50 IST" duration-ms="40295">
+    <groups>
+    </groups>
+    <test started-at="2022-02-09T12:13:10 IST" name="test2" finished-at="2022-02-09T12:13:50 IST" duration-ms="40295">
+      <class name="executerScripts.AccountTest">
+        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:executerScripts.AccountTest@4bb33f74]" started-at="2022-02-09T12:13:10 IST" name="openBrowser" finished-at="2022-02-09T12:13:38 IST" duration-ms="28664" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="accountTestFunction()[pri:0, instance:executerScripts.AccountTest@4bb33f74]" started-at="2022-02-09T12:13:38 IST" name="accountTestFunction" finished-at="2022-02-09T12:13:49 IST" duration-ms="10882" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountTestFunction -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:executerScripts.AccountTest@4bb33f74]" started-at="2022-02-09T12:13:49 IST" name="closeBrowser" finished-at="2022-02-09T12:13:50 IST" duration-ms="720" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- executerScripts.AccountTest -->
+    </test> <!-- test2 -->
+  </suite> <!-- suite1 -->
+</testng-results>
