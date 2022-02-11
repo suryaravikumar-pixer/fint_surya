@@ -10,9 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -44,26 +42,26 @@ public class BaseLibrary {
 					wdriver=new FirefoxDriver();
 		}
 		driver=new EventFiringWebDriver(wdriver);
-		Thread.sleep(2000);
+//		Thread.sleep(2000);
 		// path for properties file
 		file1=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\env.properties");
 		prop1 = new Properties();
 		prop1.load(file1);
 		driver.get(prop1.getProperty("url1"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//a[contains(text(),'Login')]")).click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.id("username")).sendKeys(prop1.getProperty("username"));
-		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.id("password")).sendKeys(prop1.getProperty("password"));
-		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.name("Login")).click();
 
 }
-@AfterTest	
-public void closeBrowser()
-{
-	
-wdriver.quit();
-}
+//@AfterTest	
+//public void closeBrowser()
+//{
+//	
+//wdriver.quit();
+//}
 }

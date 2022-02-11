@@ -1,4 +1,4 @@
-package testNgScripts;
+package testScripts;
 
 import org.testng.annotations.Test;
 

@@ -4,8 +4,8 @@
 	<test name="test1">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="executerScripts.AccountTest" />
+			<class name="testScripts.AccountTest" />
 		</classes>
 	</test>
 
-</suite>
+</suite>	

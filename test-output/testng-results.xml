@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-09T12:13:10 IST" name="suite1" finished-at="2022-02-09T12:13:50 IST" duration-ms="40295">
+  <suite started-at="2022-02-11T07:44:24 IST" name="suite1" finished-at="2022-02-11T07:45:40 IST" duration-ms="76393">
     <groups>
     </groups>
-    <test started-at="2022-02-09T12:13:10 IST" name="test2" finished-at="2022-02-09T12:13:50 IST" duration-ms="40295">
-      <class name="executerScripts.AccountTest">
-        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:executerScripts.AccountTest@4bb33f74]" started-at="2022-02-09T12:13:10 IST" name="openBrowser" finished-at="2022-02-09T12:13:38 IST" duration-ms="28664" status="PASS">
+    <test started-at="2022-02-11T07:44:24 IST" name="test1" finished-at="2022-02-11T07:45:40 IST" duration-ms="76393">
+      <class name="testScripts.AccountTest">
+        <test-method is-config="true" signature="openBrowser(java.lang.String)[pri:0, instance:testScripts.AccountTest@7a419da4]" started-at="2022-02-11T07:44:24 IST" name="openBrowser" finished-at="2022-02-11T07:45:25 IST" duration-ms="60835" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="accountTestFunction()[pri:0, instance:executerScripts.AccountTest@4bb33f74]" started-at="2022-02-09T12:13:38 IST" name="accountTestFunction" finished-at="2022-02-09T12:13:49 IST" duration-ms="10882" status="PASS">
+        <test-method signature="accountTestFunction()[pri:0, instance:testScripts.AccountTest@7a419da4]" started-at="2022-02-11T07:45:25 IST" name="accountTestFunction" finished-at="2022-02-11T07:45:40 IST" duration-ms="15524" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accountTestFunction -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:executerScripts.AccountTest@4bb33f74]" started-at="2022-02-09T12:13:49 IST" name="closeBrowser" finished-at="2022-02-09T12:13:50 IST" duration-ms="720" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- executerScripts.AccountTest -->
-    </test> <!-- test2 -->
+      </class> <!-- testScripts.AccountTest -->
+    </test> <!-- test1 -->
   </suite> <!-- suite1 -->
 </testng-results>
