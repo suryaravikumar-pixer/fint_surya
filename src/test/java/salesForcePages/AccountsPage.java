@@ -1,6 +1,5 @@
 package salesForcePages;
 
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,28 +10,30 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import baseScripts.BaseLibrary;
 
-public class AccountsPage extends BaseLibrary{
+
+public class AccountsPage{
 
 	@FindBy (xpath = "//span[text()='Accounts']//parent::a/..")
-	 WebElement accntBtn;
+	private WebElement accntBtn;
 	@FindBy(xpath="//div[text()='New']//parent::a/..")
-	WebElement newBtn;
+	private WebElement newBtn;
 	@FindBy(xpath="(//input[@role='combobox'])[3]")
-	WebElement accntField;
-	@FindBy(xpath="(//ul[@role='presentation'])[5]//child::li[2]")
-	WebElement selectAccnt;
+	private WebElement accntField;
+//	@FindBy(xpath="(//ul[@role='presentation'])[5]//child::li[2]")
+//	@FindBy(xpath="(//a[@role='option'])[1]")
+	@FindBy(xpath="//div[@class='listContent']/ul/li[1]")
+	private WebElement selectAccnt;
 	@FindBy(xpath="//button[@title='Save']")
-	WebElement saveBtn;
+	private WebElement saveBtn;
 
 public AccountsPage(WebDriver driver) {
 	PageFactory.initElements(driver,this);
-//	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 }
 
 
-public void CreateAccount(WebDriver driver){
+public void CreateAccount(WebDriver driver) throws InterruptedException{
+	
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	wait.until(ExpectedConditions.visibilityOf(accntBtn)).click();
 //	accntBtn.click();
@@ -40,21 +41,27 @@ public void CreateAccount(WebDriver driver){
 	WebDriverWait waitnewBtn = new WebDriverWait(driver,40);
 	waitnewBtn.until(ExpectedConditions.elementToBeClickable(newBtn)).click();
 //	newBtn.click();
-	WebDriverWait waitAccountField = new WebDriverWait(driver,20);
-	waitAccountField.until(ExpectedConditions.elementToBeClickable(accntField)).click();
 	System.out.println("new btn clicked");
-//	accntField.clear();
-	accntField.sendKeys("apple");
-//	accntField.click();
+	WebDriverWait waitAccountField = new WebDriverWait(driver,30);
+	waitAccountField.until(ExpectedConditions.elementToBeClickable(accntField));
+	accntField.clear();
+	Thread.sleep(5000);
+	accntField.sendKeys("hsbc");
+//	accntField.sendKeys(Keys.ENTER);
+//	accntField.sendKeys(Keys.ARROW_DOWN);
+	accntField.click();
+	accntField.clear();
+	accntField.sendKeys("tesla");
 	
-//	WebDriverWait wait2 = new WebDriverWait(driver,30);
+//	WebDriverWait wait2 = new WebDriverWait(driver,50);
 //	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='listContent'])[2]")));
-//	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@role='presentation']")));
+//	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='listContent']")));
 //	accntField.sendKeys(Keys.SPACE);
-	
-	System.out.println("expanded");
-	WebDriverWait waitSelectAccountList = new WebDriverWait(driver,30);
+	Thread.sleep(5000);
+	WebDriverWait waitSelectAccountList = new WebDriverWait(driver, 120);
 	waitSelectAccountList.until(ExpectedConditions.elementToBeClickable(selectAccnt)).click();
+//	waitSelectAccountList.until(ExpectedConditions.visibilityOf(selectAccnt)).click();
+	System.out.println("expanded");
 //			(selectAccnt)).click();
 //	selectAccnt.click();
 	System.out.println("child acccount selected");
