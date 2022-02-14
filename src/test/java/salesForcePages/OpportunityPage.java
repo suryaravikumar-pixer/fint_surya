@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OpportunityPage {
-	@FindBy (xpath = "(//span[text()='Opportunities'])[1]")
+	@FindBy (xpath = "//span[text()='Opportunities']//parent::a/..")
 	private WebElement opportunityButton;
 	@FindBy (xpath = "//div[text()='New']")
 	private WebElement newButton;
@@ -32,18 +32,31 @@ public class OpportunityPage {
 	}
 	WebDriverWait wait;
 	public void createOpportunity(WebDriver driver) {
+		System.out.println("Oppertunity page stared...");
 		opportunityButton.click();
+		System.out.println("");
 		newButton.click();
+		System.out.println("");
+		
+		
 		opportunityNameField.sendKeys("Production");
+		System.out.println("opportunity name entered");
 		opportunityNameField.sendKeys(Keys.TAB);
 		accountNameField.sendKeys(Keys.ENTER);
+		System.out.println("Account name field clicked");
 		wait = new WebDriverWait(driver, 20, 500);
 		wait.until(ExpectedConditions.visibilityOf(selectedAccountName));
 		accountNameField.sendKeys(Keys.ENTER);
+		System.out.println("Account list opened");
 		closeDate.click();
+		System.out.println("closed date entered");
 		stage.click();
+		System.out.println("stage entered");
 		stageSelect.click();
+		System.out.println("stage selected");
 		save.click();
+		System.out.println("save  clicked");
+		System.out.println("opportunity script closed");
 	}
 }
 	

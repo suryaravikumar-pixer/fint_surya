@@ -24,7 +24,7 @@ public class NotesPage {
 	@FindBy(xpath = "//input[@class='inputText notesTitle flexInput input']")
 	WebElement title;
 	@FindBy(xpath = "//div[@data-placeholder='Enter a note...']")
-	WebElement note;
+	WebElement textField;
 	@FindBy(xpath = "//span[text()='Add to Records']//parent::button")
 	WebElement addButton;
 	@FindBy(xpath = "(//span[text()='Done'])[2]//parent::button/.")
@@ -38,7 +38,7 @@ public class NotesPage {
 		System.out.println("Create Notes ....");
 		notesButton.click();
 		System.out.println("notes button clicked");
-//		Thread.sleep(2000);
+		
 //		recentNotes.click();
 //		deletebutton.click();
 		
@@ -50,11 +50,8 @@ public class NotesPage {
 		title.sendKeys("My notes");
 		System.out.println("title created");
 		
-		note.sendKeys(Keys.ENTER);
-		Thread.sleep(4000);
-		note.sendKeys("Read about Waits");
-		note.sendKeys(Keys.ENTER);
-		note.sendKeys("HELOW");
+		textField.sendKeys(Keys.ENTER);
+		textField.sendKeys("Read about Waits");
 		System.out.println("notes entered in text field");
 		
 		wait=new WebDriverWait(driver, 30);

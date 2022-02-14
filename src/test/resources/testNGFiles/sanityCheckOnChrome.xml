@@ -12,14 +12,14 @@
 		<classes>
 			<class name="testScripts.AccountTest" />
 		</classes>
-	</test>-->
+	</test>
 	
-	<!-- <test name="test3">
+	 <test name="test3">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="testScripts.ContactTest" />
 		</classes>
-	</test>  
+	</test> -->  
 	<test name="test4">
 		<parameter name="browser" value="chrome" />
 		<classes>
@@ -27,24 +27,17 @@
 		</classes>
 	</test>
 	
-	<test name="test5">
+	<!-- <test name="test5">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="testScripts.TaskTest" />
 		</classes>
-	</test>--> 
-	<test name="test6">
+	</test>
+	 <test name="test6">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="testScripts.NotesTest" />
 		</classes>
-	</test>
-	
-	
-	
-	
-	
-	
-	
+	</test>-->
 	
 </suite>	
