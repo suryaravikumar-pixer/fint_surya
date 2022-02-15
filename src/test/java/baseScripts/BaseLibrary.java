@@ -41,14 +41,14 @@ public class BaseLibrary {
 		file1=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\env.properties");
 		prop1 = new Properties();
 		prop1.load(file1);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(prop1.getProperty("url1"));
 
 }
-@AfterTest	
-public void closeBrowser()
-{
-	
-driver.quit();
-}
+//@AfterTest	
+//public void closeBrowser()
+//{
+//	
+//driver.quit();
+//}
 }

@@ -1,7 +1,7 @@
 package salesForcePages;
 
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,10 +20,11 @@ public class AccountsPage{
 	private WebElement newBtn;
 	@FindBy(xpath="(//input[@role='combobox'])[3]")
 	private WebElement accntField;
-//	@FindBy(xpath="(//ul[@role='presentation'])[5]//child::li[2]")
-//	@FindBy(xpath="(//a[@role='option'])[1]")
-	@FindBy(xpath="//div[@class='listContent']/ul/li[1]")
+
+	@FindBy(xpath="(//li[@role='presentation'])[3]")
 	private WebElement selectAccnt;
+	@FindBy(xpath="(//div[@role='listbox']//div[@class='listContent']//ul//li/a)[1]")
+	private WebElement myAccount;
 	@FindBy(xpath="//button[@title='Save']")
 	private WebElement saveBtn;
 
@@ -31,39 +32,35 @@ public AccountsPage(WebDriver driver) {
 	PageFactory.initElements(driver,this);
 }
 
-
+WebDriverWait wait;
 public void CreateAccount(WebDriver driver) throws InterruptedException{
 	
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	wait.until(ExpectedConditions.visibilityOf(accntBtn)).click();
 //	accntBtn.click();
 	System.out.println("account btn clicked");
+	
 	WebDriverWait waitnewBtn = new WebDriverWait(driver,40);
 	waitnewBtn.until(ExpectedConditions.elementToBeClickable(newBtn)).click();
 //	newBtn.click();
 	System.out.println("new btn clicked");
+	
 	WebDriverWait waitAccountField = new WebDriverWait(driver,30);
 	waitAccountField.until(ExpectedConditions.elementToBeClickable(accntField));
-	accntField.clear();
-	Thread.sleep(5000);
-	accntField.sendKeys("hsbc");
-//	accntField.sendKeys(Keys.ENTER);
-//	accntField.sendKeys(Keys.ARROW_DOWN);
-	accntField.click();
-	accntField.clear();
-	accntField.sendKeys("tesla");
+
+	Thread.sleep(4000);
+
 	
-//	WebDriverWait wait2 = new WebDriverWait(driver,50);
-//	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='listContent'])[2]")));
-//	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='listContent']")));
-//	accntField.sendKeys(Keys.SPACE);
-	Thread.sleep(5000);
-	WebDriverWait waitSelectAccountList = new WebDriverWait(driver, 120);
-	waitSelectAccountList.until(ExpectedConditions.elementToBeClickable(selectAccnt)).click();
-//	waitSelectAccountList.until(ExpectedConditions.visibilityOf(selectAccnt)).click();
+	accntField.sendKeys("Ibm");
+	accntField.sendKeys(Keys.SPACE);
+	accntField.sendKeys(Keys.BACK_SPACE);
+	accntField.sendKeys(Keys.ENTER);
+	System.out.println("Data entered in account field");
+
+	wait = new WebDriverWait(driver, 50);
+	wait.until(ExpectedConditions.visibilityOf(selectAccnt)).click();
 	System.out.println("expanded");
-//			(selectAccnt)).click();
-//	selectAccnt.click();
+
 	System.out.println("child acccount selected");
 	saveBtn.click();
 	System.out.println("SAaved");

@@ -9,35 +9,26 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">suite1</th></tr>
-<tr><td><a href="#t0">test4</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">45,632</td><td></td><td></td></tr>
+<tr><td><a href="#t0">test1</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">34,447</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">test2</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">59,789</td><td></td><td></td></tr>
+<tr><td><a href="#t2">test3</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">78,033</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">test4</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">52,136</td><td></td><td></td></tr>
+<tr><td><a href="#t4">test5</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">69,125</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t5">test6</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">50,415</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">6</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">343,945</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">suite1</th></tr></tbody><tbody id="t0"><tr><th colspan="4">test4 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testScripts.OpportunityTest</td><td><a href="#m0">accountTestFunction</a></td><td rowspan="1">1644838294543</td><td rowspan="1">34659</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">suite1</th></tr></tbody><tbody id="t0"><tr><th colspan="4">test1 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.LoginTest</td><td><a href="#m0">loginFunction</a></td><td rowspan="1">1644927149408</td><td rowspan="1">17990</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">test2 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.AccountTest</td><td><a href="#m1">accountTestFunction</a></td><td rowspan="1">1644927187279</td><td rowspan="1">40773</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">test3 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.ContactTest</td><td><a href="#m2">contactTestFunction</a></td><td rowspan="1">1644927273154</td><td rowspan="1">32938</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">test4 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.OpportunityTest</td><td><a href="#m3">accountTestFunction</a></td><td rowspan="1">1644927327176</td><td rowspan="1">31114</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">test5 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.TaskTest</td><td><a href="#m4">taskTestFunction</a></td><td rowspan="1">1644927382637</td><td rowspan="1">44781</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">test6 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testScripts.NotesTest</td><td><a href="#m5">notesTestFunction</a></td><td rowspan="1">1644927444322</td><td rowspan="1">33896</td></tr></tbody>
 </table>
-<h2>test4</h2><h3 id="m0">testScripts.OpportunityTest#accountTestFunction</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//input[@aria-readonly=&apos;true&apos;])[2]&quot;}
-  (Session info: chrome=98.0.4758.82)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
-System info: host: &apos;DESKTOP-V1B5SLC&apos;, ip: &apos;192.168.43.60&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\surya\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50043}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 85770d79a34e0f0af27158b674b9ab46
-*** Element info: {Using=xpath, value=(//input[@aria-readonly=&apos;true&apos;])[2]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
-	at salesForcePages.OpportunityPage.createOpportunity(OpportunityPage.java:53)
-	at testScripts.OpportunityTest.accountTestFunction(OpportunityTest.java:16)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>test1</h2><h3 id="m0">testScripts.LoginTest#loginFunction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>test2</h2><h3 id="m1">testScripts.AccountTest#accountTestFunction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>test3</h2><h3 id="m2">testScripts.ContactTest#contactTestFunction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>test4</h2><h3 id="m3">testScripts.OpportunityTest#accountTestFunction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>test5</h2><h3 id="m4">testScripts.TaskTest#taskTestFunction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>test6</h2><h3 id="m5">testScripts.NotesTest#notesTestFunction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

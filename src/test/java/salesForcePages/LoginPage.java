@@ -32,10 +32,12 @@ public void loginFunction() throws Exception
 	FileInputStream envfile = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\env.properties");
 	Properties prop = new Properties();
 	prop.load(envfile);
-
+	System.out.println("Home page opened");
+	System.out.println("Login Button clicked");
+	System.out.println("Login credentials entered");
 	userNameTxtBox.sendKeys(prop.getProperty("username"));	
 	passwordTxtBox.sendKeys(prop.getProperty("password"));
-
+	System.out.println("Submit button clicked");
 	submitBtn.click();
 }
 
